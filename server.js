@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const request = require('request');
 const compression = require('compression');
 const cors = require('cors');
