@@ -7,9 +7,10 @@ WORKDIR /app
 RUN apk add --update --no-cache git && \
 	git clone --single-branch --depth=1 https://github.com/nourpups/intergram.git && \
 	cd intergram && \
-	npm install
+	npm install --force \
+    npm run build
 
 EXPOSE 3001
 
 WORKDIR /app/intergram
-ENTRYPOINT ["npm", "start"]
+ENTRYPOINT ["sleep", "infinity"]
